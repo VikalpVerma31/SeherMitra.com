@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+<title>LocalLink Naukri — Home</title>
+<link rel="stylesheet" href="design.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Seher Mitra</div>
+  <div class="search">
+    <input id="globalSearch" type="search" placeholder="Search jobs, products, locations..." />
+    <button id="globalSearchBtn">Search</button>
+  </div>
+  <nav class="topnav">
+    <a href="web.html" class="active">Home</a>
+    <a href="find-jobs.html">Find Jobs</a>
+    <a href="post-job.html">Post Job</a>
+    <a href="products.html">Products</a>
+    <a href="ai-assistant.html">AI</a>
+  </nav>
+  <div class="profile-pill" id="headerProfile">Profile</div>
+</header>
+
+<div class="layout">
+  <aside class="left-col">
+    <ul class="left-menu">
+      <li><a href="find-jobs.html">Find Jobs</a></li>
+      <li><a href="post-job.html">Post Job</a></li>
+      <li><a href="products.html">Local Products</a></li>
+      <li><a href="ai-assistant.html">AI Assistant</a></li>
+      <li><a href="#" id="openProfileSidebar">My Profile</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-col">
+    <section class="hero">
+      <h1>Find Jobs. Find Shops. Nearby</h1>
+      <p>Hire, sell, or discover — all in one local hub.</p>
+    </section>
+
+    <section class="cards-row">
+      
+
+      <div class="card">
+        <h3>Trending Jobs</h3>
+        <ul id="homeTrendingJobs"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Trending Products</h3>
+        <ul id="homeTrendingProducts"></ul>
+      </div>
+    </section>
+
+    <!-- Profile section (same as you had) -->
+    <section id="profileSection" class="card profile-card">
+      <h2>Your Profile</h2>
+      <div class="profile-container">
+        <div class="profile-left">
+          <img id="profileImage" src="https://via.placeholder.com/120" alt="Profile Picture">
+          <input type="file" id="uploadProfilePic" accept="image/*">
+        </div>
+        <div class="profile-right">
+          <form id="profileForm">
+            <input type="text" id="profileName" placeholder="Your Name" required>
+            <input type="email" id="profileEmail" placeholder="Your Email (for notifications)" required>
+            <input type="text" id="profileHobby" placeholder="write your hobby/talent if you are job seeker" />
+            <select id="profileRole" required>
+              <option value="" disabled selected>Select your Role</option>
+              <option value="Shop Owner">Shop Owner</option>
+              <option value="Job Seeker">Job Seeker</option>
+              <option value="Customer">Customer</option>
+              <option value="Delivery Person">Delivery Person</option>
+              <option value="Other">Other</option>
+            </select>
+            <input type="text" id="profileLocation" placeholder="Your Location">
+            <textarea id="profileBio" placeholder="Short Bio" rows="3"></textarea>
+            <button type="submit">Save Profile</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="profile-preview" id="profilePreview" style="display:none;">
+        <h3>Profile Preview</h3>
+        <div class="card inner">
+          <img id="previewImage" src="" alt="Profile" width="100">
+          <p><strong id="previewName"></strong></p>
+          <p id="previewRole"></p>
+          <p id="previewLocation"></p>
+          <p id="previewBio"></p>
+          <button id="editProfileBtn">Edit Profile</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="right-col">
+    <div class="card">
+      <h4>Trending Products</h4>
+      <ul id="trendingProducts"></ul>
+    </div>
+    
+
+    <div class="card">
+      <h4>Suggested Candidates</h4>
+      <ul id="suggestedCandidates"></ul>
+    </div>
+  </aside>
+</div>
+
+
+
+<footer class="site-footer">
+  &copy; 2025 LocalLink Naukri
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
